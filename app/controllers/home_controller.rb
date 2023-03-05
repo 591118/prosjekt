@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   end
 
   def siste
+    @text = Tekst.find(params[:id])
     @message = "Siste page av appen"
   end
 end
