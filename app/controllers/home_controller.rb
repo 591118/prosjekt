@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     tekst = tekst.new(text_params)
 
     if @tekst.save
-      redirect "/siste"
+      redirect_to "/siste"
     else
       render '/homepage'
     end
@@ -22,6 +22,6 @@ class HomeController < ApplicationController
     end
 
   def siste
-    @tekst = Tekst.find(params[:id])
+    @tekst = Tekst.latest
     @message = "Siste page av appen"
   end
