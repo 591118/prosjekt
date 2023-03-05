@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get "/neste", to: 'home#neste'
   post "/neste", to: "home#opprett", as: :nestepost
   
-  get "/siste/:tekst", to: "home#siste", as: :siste_path
+  get "/siste", to: "home#siste", as: :siste_path
 end

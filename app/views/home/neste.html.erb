@@ -4,7 +4,7 @@
 
 <p><%= @message %></p>
 
-<form action="nestepost?tekst=<%= params[:tekst] %>" method="post">
+<form action="neste" method="post">
   <label for="input-text">Enter some text:</label>
   <input type="text" id="tekst" name="tekst">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
