@@ -11,8 +11,7 @@ class HomeController < ApplicationController
       if @tekst.save
         redirect_to "/siste" #(@tekst)
       else 
-        flash[:error] = "Feil, ikke godkjent"
-        render :new
+        redirect_to "/homepage"
       end
   end 
 
