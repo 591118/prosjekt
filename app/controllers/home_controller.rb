@@ -6,17 +6,13 @@ class HomeController < ApplicationController
     @message = "Hello kaken"
   end
 
-  def opprett
-    @tekst = Text.new(params[:id])
-      if true
-        redirect_to videre(text: @tekst)
-      else 
-        redirect_to "/neste"
-      end
+  def opprett(tekst)
+    @tekst = params[:tekst]
+    redirect_to siste_path(tekst: tekst)
   end 
 
-  def siste
-    @tekst = params[:text]
+  def siste (tekst)
+    @tekst = params[:tekst]
     @message = "Siste page av appen"
   end
 
