@@ -15,13 +15,11 @@ class HomeController < ApplicationController
       render '/homepage'
     end
   end
+  end
 
-  private
-    def text_params
+  private def text_params
       params.require(:tekst).permit(:content)
     end
-
-  end
 
   def siste
     @tekst = Tekst.find(params[:id])
