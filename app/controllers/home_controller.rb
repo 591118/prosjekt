@@ -12,7 +12,7 @@ class HomeController < ApplicationController
         redirect_to "/siste" #(@tekst)
       else 
         flash[:error] = "Feil, ikke godkjent"
-        render '/neste'
+        render :new
       end
   end 
 
