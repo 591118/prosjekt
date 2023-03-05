@@ -8,15 +8,15 @@ class HomeController < ApplicationController
 
   def opprett
     @tekst = Text.new(params[:id])
-      if @tekst.save
-        redirect_to "/siste" #(@tekst)
+      if true
+        redirect_to videre(text: @tekst)
       else 
         redirect_to "/neste"
       end
   end 
 
   def siste
-    @tekst = Text.latest
+    @tekst = params[:text]
     @message = "Siste page av appen"
   end
 
