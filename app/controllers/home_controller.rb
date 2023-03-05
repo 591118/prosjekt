@@ -5,4 +5,8 @@ class HomeController < ApplicationController
   def neste
     @message = "Hello kaken"
   end
+
+  def siste
+    @message = "Siste page av appen"
+  end
 end
