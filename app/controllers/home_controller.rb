@@ -11,7 +11,7 @@ class HomeController < ApplicationController
       if @tekst.save
         redirect_to "/siste" #(@tekst)
       else 
-        redirect_to "/homepage"
+        redirect_to "/neste"
       end
   end 
 
