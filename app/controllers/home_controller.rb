@@ -1,4 +1,8 @@
 class HomeController < ApplicationController
-  def index
+  def index    
+  end
+
+  def neste
+    @message = "Hello kaken"
   end
 end

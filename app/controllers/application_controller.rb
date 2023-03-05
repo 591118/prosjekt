@@ -4,5 +4,6 @@ class ApplicationController < ActionController::Base
         @message = "Yesse"
     end
 
+    
 
 end
