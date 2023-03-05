@@ -25,4 +25,3 @@ class HomeController < ApplicationController
     @tekst = Tekst.find(params[:id])
     @message = "Siste page av appen"
   end
-end
