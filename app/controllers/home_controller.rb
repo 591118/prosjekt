@@ -8,7 +8,7 @@ class HomeController < ApplicationController
 
   def opprett
     @tekst = Text.new(params[:id])
-      if tekst.save
+      if @tekst.save
         redirect_to "/siste" #(@tekst)
       else 
         render '/homepage'
