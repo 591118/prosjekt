@@ -7,21 +7,15 @@ class HomeController < ApplicationController
   end
 
   def opprett
-    tekst = tekst.new(text_params)
-
-    if @tekst.save
-      redirect_to "/siste"
-    else
-      render '/homepage'
-    end
-  end
-  end
-
-  private def text_params
-      params.require(:tekst).permit(:content)
-    end
+    @tekst = Tekst.find(params[:id])
+      if true
+        redirect_to "/siste"(@tekst)
+      end
+  end 
 
   def siste
-    @tekst = Tekst.latest
+    @tekst = tekst.latest
     @message = "Siste page av appen"
   end
+
+end
