@@ -13,7 +13,7 @@ class HomeController < ApplicationController
 
   def siste ()
     @message = "Siste page av appen"
-    @tekst = "input"
+    @tekst
   end
 
   private def text_params
