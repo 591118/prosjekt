@@ -8,14 +8,15 @@ class HomeController < ApplicationController
 
   def opprett()
     @tekst = params[:tekst]
-    redirect_to "/siste"
+    render 'siste'
   end 
 
   def siste ()
     @message = "Siste page av appen"
+    @tekst = "input"
   end
 
-  private def tekst_params
+  private def text_params
     params.require(:Text).permit(:body)
   end
 
